@@ -32,6 +32,9 @@
     .site-detail summary::after { content:"+"; color:#0033A0; font:1.25rem ui-monospace,monospace; }
     .site-detail[open] summary::after { content:"−"; }
     .site-detail summary:focus-visible { outline:2px solid #0033A0; outline-offset:4px; }
+    #faq summary { list-style:none; }
+    #faq summary::-webkit-details-marker { display:none; }
+    #faq summary::marker { content:""; }
     .site-detail p { padding:0 2rem 1.1rem 0; color:#64748B; font-size:.875rem; line-height:1.7; }
     .site-mobile-cta { display:none; }
     .site-mobile-cta-hidden { visibility:hidden; opacity:0; pointer-events:none; }
@@ -68,13 +71,13 @@
 
   <main>
     <section class="relative w-full overflow-hidden bg-[#0033A0]">
-      <div class="pointer-events-none absolute inset-0" aria-hidden="true"><div class="absolute -right-24 -top-24 size-[420px] rotate-12 bg-[#0066FF]/25"></div><div class="absolute -bottom-32 right-32 size-72 -skew-x-12 bg-white/5"></div><div class="absolute left-1/2 top-0 h-full w-px bg-white/10"></div></div>
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true"><div class="absolute -right-24 -top-24 size-[420px] rotate-12 bg-[#0066FF]/25"></div><div class="absolute -bottom-32 right-32 size-72 -skew-x-12 bg-white/5"></div></div>
       <div class="relative mx-auto max-w-7xl px-4 pb-16 pt-28 md:px-6 md:pb-20 md:pt-36">
         <div class="grid items-center gap-10 lg:grid-cols-12">
           <div class="lg:col-span-7"><span class="inline-flex items-center gap-2 border border-white/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">企业 AI 试点 · 低风险落地</span><h1 class="mt-6 max-w-3xl text-4xl font-extrabold leading-[1.12] tracking-tight text-white md:text-6xl">帮企业把 AI<br>真正落到业务流程里</h1><p class="mt-6 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">从一个部门、一条关键流程和一组真实或脱敏样本开始，先看清是否值得投入，再决定继续、调整还是停止。</p><div class="mt-8 flex flex-wrap items-center gap-3"><a href="#fit" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-none border border-[#0033A0] bg-white px-6 py-2 text-sm font-bold text-[#0033A0] shadow-none transition-colors hover:bg-[#EAF1FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">先判断我的问题适不适合 <span aria-hidden="true">→</span></a><a href="#path" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-none border border-white/50 bg-transparent px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">查看落地路径</a></div></div>
           <div class="lg:col-span-5"><div class="border-t-[3px] border-t-white bg-white p-6 shadow-md md:p-8"><div class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0033A0]">先从小范围开始</div><ul class="site-checklist mt-6 text-sm text-[#334155]"><li>一个部门：边界清楚，方便协作</li><li>一条流程：输入输出可以描述</li><li>一组样本：真实或脱敏，合法可用</li><li>按证据决策：继续、调整或停止</li></ul><div class="mt-6 bg-[#EAF1FF] px-4 py-3 text-xs leading-relaxed text-[#0033A0]">不要求先建设全公司平台，也不默认接入核心系统。</div></div></div>
         </div>
-        <div class="mt-12 grid grid-cols-3 gap-3 border-t border-white/20 pt-5 text-[11px] leading-relaxed text-white/70 sm:text-xs"><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">7–10 天</strong><span class="block">完成机会盘点</span></div><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">6–10 周</strong><span class="block">完成单部门试点</span></div><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">1 个工作日</strong><span class="block">反馈是否适合继续</span></div></div>
+        <div class="mt-12 grid grid-cols-3 gap-3 pt-5 text-[11px] leading-relaxed text-white/70 sm:text-xs"><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">7–10 天</strong><span class="block">完成机会盘点</span></div><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">6–10 周</strong><span class="block">完成单部门试点</span></div><div class="min-w-0"><strong class="block text-lg leading-tight text-white sm:text-xl">1 个工作日</strong><span class="block">反馈是否适合继续</span></div></div>
       </div><div class="h-8 w-full bg-[#F4F7F9] [clip-path:polygon(0_0,100%_0,100%_100%,0_0)]" aria-hidden="true"></div>
     </section>
 
