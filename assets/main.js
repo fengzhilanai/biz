@@ -33,9 +33,9 @@
 
   document.querySelectorAll('#faq details').forEach(function (item) {
     item.addEventListener('toggle', function () {
-      if (!item.open) return;
       document.querySelectorAll('#faq details').forEach(function (other) {
-        if (other !== item) other.open = false;
+        other.classList.toggle('faq-open', other === item && item.open);
+        if (other !== item && item.open) other.open = false;
       });
     });
   });

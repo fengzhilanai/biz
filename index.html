@@ -13,6 +13,14 @@
   <meta property="og:url" content="https://fengzhilanai.github.io/biz/">
   <meta property="og:image" content="https://fengzhilanai.github.io/biz/assets/og-image.png">
   <link rel="stylesheet" href="assets/styles.css?v=20260912">
+  <style>
+    /* 静态版补齐 Radix Accordion 的展开态，不依赖构建时的 data-state 选择器。 */
+    #faq details.faq-open > summary { color: #0033A0; }
+    #faq summary { list-style: none; }
+    #faq summary::-webkit-details-marker { display: none; }
+    #faq summary::after { content: '+'; float: right; color: #94A3B8; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    #faq details.faq-open > summary::after { content: '−'; color: #0033A0; }
+  </style>
 </head>
 <body>
 <div id="top" class="min-h-screen bg-[#F4F7F9]">
@@ -32,7 +40,7 @@
         <a href="#services" data-nav class="rounded-none px-3 py-2 text-sm font-medium text-[#475569] transition-colors hover:bg-slate-100 hover:text-[#1A1A1A]">服务与报价</a>
         <a href="#faq" data-nav class="rounded-none px-3 py-2 text-sm font-medium text-[#475569] transition-colors hover:bg-slate-100 hover:text-[#1A1A1A]">常见问题</a>
       </nav>
-      <a href="#cta" class="shrink-0 rounded-none bg-[#0033A0] px-4 py-2 text-sm font-medium text-white hover:bg-[#002673]">提交一个部门问题</a>
+      <a href="#cta" class="inline-flex min-h-8 shrink-0 items-center justify-center rounded-none bg-[#0033A0] px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-[#002673] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0033A0]">提交一个部门问题</a>
     </div>
   </header>
 
@@ -50,8 +58,8 @@
             <h1 class="mt-6 text-4xl font-extrabold leading-[1.12] tracking-tight text-white md:text-6xl">先验证一个部门场景，再决定是否推广</h1>
             <p class="mt-6 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">从一个具体部门问题开始，让实际使用人员用业务样本完成试用，再依据验收结果决定继续、调整还是停止。</p>
             <div class="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#cta" class="inline-flex h-11 items-center justify-center gap-2 rounded-none bg-white px-6 text-sm font-semibold text-[#0033A0] hover:bg-[#EAF1FF]">提交一个部门问题 <span aria-hidden="true">→</span></a>
-              <a href="#path" class="inline-flex h-11 items-center justify-center rounded-none border border-white/50 bg-transparent px-6 text-sm font-semibold text-white hover:bg-white/10">查看落地路径</a>
+              <a href="#cta" class="inline-flex min-h-10 items-center justify-center gap-2 rounded-none border border-[#0033A0] bg-white px-6 py-2 text-sm font-semibold text-[#0033A0] shadow-none transition-colors hover:bg-[#EAF1FF] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white">提交一个部门问题 <span aria-hidden="true">→</span></a>
+              <a href="#path" class="inline-flex min-h-10 items-center justify-center gap-2 rounded-none border border-white/50 bg-transparent px-6 py-2 text-sm font-semibold text-white shadow-none transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white">查看落地路径</a>
             </div>
           </div>
           <div class="lg:col-span-5">
@@ -97,7 +105,7 @@
       <div class="mt-10 grid gap-6 md:grid-cols-3">
         <article class="h-full border-t-[3px] border-t-[#0033A0] bg-white p-6 shadow-md"><span class="flex size-10 items-center justify-center bg-[#0033A0] text-white">企</span><h3 class="mt-5 text-lg font-bold">企业经营者</h3><p class="mt-2 text-sm leading-relaxed text-[#64748B]">希望控制投入与风险，先看清值不值得做，再决定是否加大投入。</p></article>
         <article class="h-full border-t-[3px] border-t-[#0033A0] bg-white p-6 shadow-md"><span class="flex size-10 items-center justify-center bg-[#0033A0] text-white">部</span><h3 class="mt-5 text-lg font-bold">业务 / 部门负责人</h3><p class="mt-2 text-sm leading-relaxed text-[#64748B]">手里有明确部门问题，想先在团队内试通，再争取更大范围推广。</p></article>
-        <article class="h-full border-t-[3px] border-t-[#0033A0] bg-white p-6 shadow-md"><span class="flex size-10 items-center justify-center bg-[#0033A0] text-white">数</span><h3 class="mt-5 text-lg font-bold">信息化 · HR · 试点发起人</h3><p class="mt-2 text-sm leading-relaxed text-[#64748B]">负责数字化、培训或项目推动，需要一套可落地、可验收的起步方案。</p><div class="mt-4 inline-flex bg-[#EAF1FF] px-2.5 py-1 text-xs font-medium text-[#0033A0]">✓ 一个部门、一套关键步骤即可启动</div></article>
+        <article class="h-full border-t-[3px] border-t-[#0033A0] bg-white p-6 shadow-md"><span class="flex size-10 items-center justify-center bg-[#0033A0] text-white">数</span><h3 class="mt-5 text-lg font-bold">信息化 · HR · 试点发起人</h3><p class="mt-2 text-sm leading-relaxed text-[#64748B]">负责数字化、培训或项目推动，需要一套可落地、可验收的起步方案。</p><div class="mt-4 inline-flex items-center gap-1.5 bg-[#EAF1FF] px-2.5 py-1 text-xs font-medium text-[#0033A0]">✓ 一个部门、一套关键步骤即可启动</div></article>
       </div>
       <div class="mt-12 border border-[#E2E8F0] bg-white p-6 md:p-10"><div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between"><h3 class="text-xl font-bold">适合作为首个试点的场景</h3><p class="text-sm text-[#94A3B8]">输入输出清楚、规则可描述、人工可复核</p></div><div class="mt-8 grid gap-px bg-[#E2E8F0] sm:grid-cols-2 lg:grid-cols-3">
         <div class="bg-white p-6"><h4 class="text-sm font-bold">文档资料处理</h4><p class="mt-2 text-xs text-[#64748B]">高频文档、表单或资料的整理、提取与核对。</p><p class="mt-3 text-xs font-medium text-[#0033A0]">输入输出清晰，易衡量准确率</p></div>
@@ -142,15 +150,15 @@
     <section id="faq" class="scroll-mt-16 w-full bg-white py-16 md:py-24"><div class="mx-auto max-w-3xl px-4 md:px-6">
       <div class="mx-auto max-w-3xl text-center"><div class="flex items-center justify-center gap-3"><span class="h-6 w-1 bg-[#0033A0]"></span><span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0033A0]">06 · 常见问题</span></div><h2 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">决策前，客户最常问的四件事</h2></div>
       <div class="mt-10 border-t border-[#E2E8F0]">
-        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-sm font-semibold md:text-base"><span class="mr-3 font-mono text-xs text-[#0033A0]">Q1</span>机会盘点后一定要进入试点吗？</summary><p class="pb-5 pl-8 pr-4 text-sm text-[#64748B]">不需要。盘点交付本身应能支持独立决策，结论也可能是内部执行、先补条件或暂缓。</p></details>
-        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-sm font-semibold md:text-base"><span class="mr-3 font-mono text-xs text-[#0033A0]">Q2</span>试点一定要接入现有系统吗？</summary><p class="pb-5 pl-8 pr-4 text-sm text-[#64748B]">不一定。有时先用脱敏样本和独立环境验证更合适；是否集成取决于目标、风险、环境和书面范围。</p></details>
-        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-sm font-semibold md:text-base"><span class="mr-3 font-mono text-xs text-[#0033A0]">Q3</span>公开起价包含私有部署吗？</summary><p class="pb-5 pl-8 pr-4 text-sm text-[#64748B]">公开起价对应较少系统依赖的标准范围。私有部署、复杂网络、安全审查、日志备份、高可用和长期运维会结合实际环境单独报价。</p></details>
-        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-sm font-semibold md:text-base"><span class="mr-3 font-mono text-xs text-[#0033A0]">Q4</span>上线后出现问题怎样处理？</summary><p class="pb-5 pl-8 pr-4 text-sm text-[#64748B]">具体缺陷支持、工作额度和响应方式会写入项目报价与协议；运行优化适合持续改善已使用成果，新功能和紧急值守按新的范围处理。</p></details>
+        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-left text-sm font-semibold text-[#1A1A1A] hover:no-underline md:text-base"><span class="flex items-start gap-3 pr-4"><span class="font-mono text-xs font-bold text-[#0033A0]">Q1</span>机会盘点后一定要进入试点吗？</span></summary><p class="pb-5 pl-8 pr-4 text-sm leading-relaxed text-[#64748B]">不需要。盘点交付本身应能支持独立决策，结论也可能是内部执行、先补条件或暂缓。</p></details>
+        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-left text-sm font-semibold text-[#1A1A1A] hover:no-underline md:text-base"><span class="flex items-start gap-3 pr-4"><span class="font-mono text-xs font-bold text-[#0033A0]">Q2</span>试点一定要接入现有系统吗？</span></summary><p class="pb-5 pl-8 pr-4 text-sm leading-relaxed text-[#64748B]">不一定。有时先用脱敏样本和独立环境验证更合适；是否集成取决于目标、风险、环境和书面范围。</p></details>
+        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-left text-sm font-semibold text-[#1A1A1A] hover:no-underline md:text-base"><span class="flex items-start gap-3 pr-4"><span class="font-mono text-xs font-bold text-[#0033A0]">Q3</span>公开起价包含私有部署吗？</span></summary><p class="pb-5 pl-8 pr-4 text-sm leading-relaxed text-[#64748B]">公开起价对应较少系统依赖的标准范围。私有部署、复杂网络、安全审查、日志备份、高可用和长期运维会结合实际环境单独报价。</p></details>
+        <details class="border-b border-[#E2E8F0]"><summary class="cursor-pointer py-5 text-left text-sm font-semibold text-[#1A1A1A] hover:no-underline md:text-base"><span class="flex items-start gap-3 pr-4"><span class="font-mono text-xs font-bold text-[#0033A0]">Q4</span>上线后出现问题怎样处理？</span></summary><p class="pb-5 pl-8 pr-4 text-sm leading-relaxed text-[#64748B]">具体缺陷支持、工作额度和响应方式会写入项目报价与协议；运行优化适合持续改善已使用成果，新功能和紧急值守按新的范围处理。</p></details>
       </div>
     </div></section>
 
     <section id="cta" class="scroll-mt-16 w-full py-16 md:py-24"><div class="mx-auto max-w-7xl px-4 md:px-6"><div class="relative overflow-hidden bg-[#0033A0] p-8 md:p-14"><div class="pointer-events-none absolute inset-0" aria-hidden="true"><div class="absolute -right-20 -top-20 size-80 rotate-12 bg-[#0066FF]/30"></div><div class="absolute -bottom-24 -left-16 size-72 -skew-x-12 bg-white/5"></div></div><div class="relative grid gap-10 lg:grid-cols-12">
-      <div class="lg:col-span-7"><span class="inline-flex border border-white/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">07 · 开启试点</span><h2 class="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">提交一个部门问题</h2><p class="mt-4 max-w-lg text-sm leading-relaxed text-white/80 md:text-base">首次不需要准备完整立项书，用小范围验证，换一个低风险的决策依据。</p><a href="https://qcnrt01y72yf.feishu.cn/share/base/form/shrcn53nHKog9UxwnaIaE82swZe" target="_blank" rel="noopener" class="mt-8 inline-flex h-11 items-center gap-2 rounded-none bg-white px-7 text-sm font-bold text-[#0033A0] hover:bg-[#EAF1FF]">填写 AI 项目合作咨询表 ↗</a><p class="mt-6 max-w-lg text-xs leading-relaxed text-white/60">收到有效提交后 1 个工作日内，说明是否适合继续沟通、需要补充什么，或建议暂缓。</p></div>
+      <div class="lg:col-span-7"><span class="inline-flex border border-white/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">07 · 开启试点</span><h2 class="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">提交一个部门问题</h2><p class="mt-4 max-w-lg text-sm leading-relaxed text-white/80 md:text-base">首次不需要准备完整立项书，用小范围验证，换一个低风险的决策依据。</p><a href="https://qcnrt01y72yf.feishu.cn/share/base/form/shrcn53nHKog9UxwnaIaE82swZe" target="_blank" rel="noopener" class="mt-8 inline-flex min-h-10 items-center justify-center gap-2 rounded-none border border-[#0033A0] bg-white px-7 py-2 text-sm font-bold text-[#0033A0] shadow-none transition-colors hover:bg-[#EAF1FF] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white">填写 AI 项目合作咨询表 ↗</a><p class="mt-6 max-w-lg text-xs leading-relaxed text-white/60">收到有效提交后 1 个工作日内，说明是否适合继续沟通、需要补充什么，或建议暂缓。</p></div>
       <div class="lg:col-span-5"><div class="border-t-[3px] border-t-white bg-white p-6 md:p-7"><div class="text-xs font-bold uppercase tracking-[0.2em] text-[#0033A0]">首次咨询请准备</div><ol class="mt-5 space-y-4"><li class="flex gap-3"><span class="flex size-6 shrink-0 items-center justify-center bg-[#0033A0] text-xs font-bold text-white">1</span><span class="text-sm text-[#334155]">说明一个具体部门问题</span></li><li class="flex gap-3"><span class="flex size-6 shrink-0 items-center justify-center bg-[#0033A0] text-xs font-bold text-white">2</span><span class="text-sm text-[#334155]">告知是否已有负责人、样本和试用人员</span></li><li class="flex gap-3"><span class="flex size-6 shrink-0 items-center justify-center bg-[#0033A0] text-xs font-bold text-white">3</span><span class="text-sm text-[#334155]">填写期望时间与微信 / 手机 / 邮箱任一联系方式</span></li></ol><div class="mt-6 bg-[#F8FAFC] p-3.5 text-xs leading-relaxed text-[#64748B]">首次咨询不等同于正式方案设计或项目启动，请勿提交密码、API Key 或敏感业务数据。</div></div></div>
     </div></div></div></section>
   </main>
